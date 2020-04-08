@@ -7,7 +7,7 @@ describe("Projects", () => {
     const response = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
+        url: "https://github.com/iuridev/conceitoNodeJs",
         title: "Umbriel",
         techs: ["Node", "Express", "TypeScript"]
       });
@@ -15,7 +15,7 @@ describe("Projects", () => {
     expect(isUuid(response.body.id)).toBe(true);
 
     expect(response.body).toMatchObject({
-      url: "https://github.com/Rocketseat/umbriel",
+      url: "https://github.com/iuridev/conceitoNodeJs",
       title: "Umbriel",
       techs: ["Node", "Express", "TypeScript"],
       likes: 0
@@ -26,7 +26,7 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
+        url: "https://github.com/iuridev/conceitoNodeJs",
         title: "Umbriel",
         techs: ["Node", "Express", "TypeScript"]
       });
@@ -37,7 +37,7 @@ describe("Projects", () => {
       expect.arrayContaining([
         {
           id: repository.body.id,
-          url: "https://github.com/Rocketseat/umbriel",
+          url: "https://github.com/iuridev/conceitoNodeJs",
           title: "Umbriel",
           techs: ["Node", "Express", "TypeScript"],
           likes: 0
@@ -50,7 +50,7 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
+        url: "https://github.com/iuridev/conceitoNodeJs",
         title: "Umbriel",
         techs: ["Node", "Express", "TypeScript"]
       });
@@ -82,7 +82,7 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
+        url: "https://github.com/iuridev/conceitoNodeJs",
         title: "Umbriel",
         techs: ["React", "ReactNative", "TypeScript", "ContextApi"]
       });
@@ -102,7 +102,7 @@ describe("Projects", () => {
     const response = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
+        url: "https://github.com/iuridev/conceitoNodeJs",
         title: "Umbriel",
         techs: ["Node", "Express", "TypeScript"]
       });
